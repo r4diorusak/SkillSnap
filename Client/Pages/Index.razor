@@ -1,0 +1,36 @@
+@page "/"
+@inject HttpClient Http
+
+<h3>SkillSnap — Portfolio</h3>
+
+<button @onclick="Refresh">Refresh</button>
+
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var it in items)
+        {
+            <li>
+                <strong>@it.Title</strong> — @it.Description
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private List<SkillSnap.Shared.Models.PortfolioItem>? items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Refresh();
+    }
+
+    private async Task Refresh()
+    {
+        items = await Http.GetFromJsonAsync<List<SkillSnap.Shared.Models.PortfolioItem>>("api/portfolio");
+    }
+}

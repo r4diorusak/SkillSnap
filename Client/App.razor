@@ -1,0 +1,13 @@
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject AuthState Auth
+@using SkillSnap.Shared.Models
+
+<Router AppAssembly="typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(SkillSnap.Client.Shared.MainLayout)" />
+    </Found>
+    <NotFound>
+        <p>Page not found</p>
+    </NotFound>
+</Router>

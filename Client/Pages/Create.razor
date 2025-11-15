@@ -1,0 +1,38 @@
+@page "/create"
+@inject HttpClient Http
+@inject AuthState Auth
+
+<h3>Create Portfolio Item</h3>
+
+<EditForm Model="model" OnValidSubmit="HandleValid">
+    <InputText @bind-Value="model.Title" placeholder="Title" />
+    <br />
+    <InputTextArea @bind-Value="model.Description" placeholder="Description" />
+    <br />
+    <button type="submit">Create</button>
+</EditForm>
+
+@code {
+    private SkillSnap.Shared.Models.PortfolioItem model = new();
+
+    private async Task HandleValid()
+    {
+        if (!string.IsNullOrWhiteSpace(Auth.AccessToken))
+        {
+            Http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Auth.AccessToken);
+        }
+        var resp = await Http.PostAsJsonAsync("api/portfolio", model);
+        if (resp.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            var text = await resp.Content.ReadAsStringAsync();
+            Console.WriteLine("Create failed: " + text);
+        }
+    }
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+}
