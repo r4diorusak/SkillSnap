@@ -1,0 +1,11 @@
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\bin\Debug\net7.0\SkillSnap.Shared.deps.json
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\bin\Debug\net7.0\SkillSnap.Shared.dll
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\bin\Debug\net7.0\SkillSnap.Shared.pdb
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\SkillSnap.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\SkillSnap.Shared.AssemblyInfoInputs.cache
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\SkillSnap.Shared.AssemblyInfo.cs
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\SkillSnap.Shared.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\SkillSnap.Shared.dll
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\refint\SkillSnap.Shared.dll
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\SkillSnap.Shared.pdb
+D:\Documents\GitHub\Coursera\SkillSnap\SkillSnap\Shared\obj\Debug\net7.0\ref\SkillSnap.Shared.dll
